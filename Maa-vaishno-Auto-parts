@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>मां वैष्णो ऑटो पार्ट्स एंड रिपेयर सेंटर - अलावलपुर | Bike Repair & Spare Parts Shop</title>
+<meta name="description" content="मां वैष्णो ऑटो पार्ट्स एंड रिपेयर सेंटर, अलावलपुर (बेवर रोड)। यहाँ सभी प्रकार की बाइकों की सर्विसिंग, इंजन रिपेयर, पंचर, और असली स्पेयर पार्ट्स उचित दामों पर मिलते हैं। समय: सुबह 9 से रात 8 बजे तक।"/>
+<meta name="keywords" content="Ma Vaishno Auto Parts Alawalpur, Bike Repair Shop in Alawalpur, Two Wheeler Mechanic Bewar Road, Bike Spare Parts, Motorcycle Repair, Engine Repair, Bike Service near me, मां वैष्णो ऑटो पार्ट्स, बाइक रिपेयरिंग दुकान"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080c14;
+  --card:#0e1624;
+  --card2:#121e30;
+  --border:rgba(255,255,255,0.07);
+  --border2:rgba(255,255,255,0.12);
+  --red:#e63946;
+  --red2:#ff6b6b;
+  --gold:#f4c430;
+  --blue:#3a86ff;
+  --green:#06d6a0;
+  --white:#f0f4ff;
+  --muted:#8899aa;
+  --r:14px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);line-height:1.6;overflow-x:hidden}
+
+/* GLOW ORBS */
+.orb{position:fixed;border-radius:50%;filter:blur(80px);opacity:0.18;pointer-events:none;z-index:0}
+.orb1{width:500px;height:500px;background:#3a86ff;top:-150px;left:-150px}
+.orb2{width:400px;height:400px;background:#e63946;bottom:-100px;right:-100px}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(8,12,20,0.85);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  padding:0 24px;height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{
+  font-family:'Baloo 2',cursive,sans-serif;font-weight:800;font-size:1.05rem;
+  background:linear-gradient(135deg,#f4c430,#ff6b6b);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1.1;
+}
+.logo small{display:block;font-size:0.6rem;font-weight:600;-webkit-text-fill-color:#8899aa;font-family:'Inter',sans-serif}
+.nav-btn{
+  background:var(--red);color:#fff;text-decoration:none;
+  padding:9px 20px;border-radius:50px;font-size:0.8rem;font-weight:600;
+  display:flex;align-items:center;gap:6px;
+  box-shadow:0 0 20px rgba(230,57,70,0.4);
+  transition:box-shadow 0.2s;
+}
+.nav-btn:hover{box-shadow:0 0 30px rgba(230,57,70,0.6)}
+
+/* HERO */
+.hero{
+  position:relative;z-index:1;
+  min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:60px 24px 80px;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(58,134,255,0.12) 0%,transparent 70%);
+}
+.hero-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.05);border:1px solid var(--border2);
+  border-radius:50px;padding:6px 16px;font-size:0.75rem;color:var(--muted);
+  margin-bottom:28px;
+}
+.chip-dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 8px var(--green)}
+.hero h1{
+  font-family:'Baloo 2',cursive,sans-serif;font-weight:800;
+  font-size:clamp(2rem,7vw,4rem);line-height:1.08;
+  margin-bottom:20px;letter-spacing:-0.5px;
+}
+.hero h1 .line1{color:var(--white)}
+.hero h1 .line2{
+  background:linear-gradient(135deg,var(--gold) 0%,var(--red2) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero h1 .line3{color:var(--white);opacity:0.85}
+.hero-sub{color:var(--muted);font-size:1.05rem;max-width:440px;margin:0 auto 36px;line-height:1.7}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-call{
+  background:linear-gradient(135deg,var(--red),#c1121f);
+  color:#fff;padding:14px 30px;border-radius:50px;
+  text-decoration:none;font-weight:600;font-size:0.95rem;
+  display:inline-flex;align-items:center;gap:9px;
+  box-shadow:0 8px 32px rgba(230,57,70,0.35);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.btn-call:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(230,57,70,0.5)}
+.btn-wa{
+  background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.3);
+  color:#25d366;padding:14px 30px;border-radius:50px;
+  text-decoration:none;font-weight:600;font-size:0.95rem;
+  display:inline-flex;align-items:center;gap:9px;
+  transition:background 0.2s,transform 0.2s;
+}
+.btn-wa:hover{background:rgba(37,211,102,0.2);transform:translateY(-2px)}
+.btn-call svg,.btn-wa svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+
+/* SCROLL INDICATOR */
+.scroll-hint{
+  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  font-size:0.7rem;color:var(--muted);opacity:0.6;
+}
+.scroll-arrow{
+  width:20px;height:20px;border-right:1.5px solid var(--muted);
+  border-bottom:1.5px solid var(--muted);
+  transform:rotate(45deg);
+  animation:bounce 1.5s infinite;
+}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(4px)}}
+
+/* STATS */
+.stats-bar{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+@media(max-width:600px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
+.stat{
+  padding:24px 16px;text-align:center;
+  border-right:1px solid var(--border);
+}
+.stat:last-child{border-right:none}
+.stat-n{
+  font-family:'Baloo 2',cursive,sans-serif;font-size:1.8rem;font-weight:800;
+  background:linear-gradient(135deg,var(--gold),var(--red2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;
+}
+.stat-l{font-size:0.72rem;color:var(--muted);margin-top:4px}
+
+/* WRAPPER */
+.wrap{max-width:940px;margin:0 auto;padding:72px 24px;position:relative;z-index:1}
+
+/* SECTION HEADER */
+.sh{margin-bottom:40px}
+.sh-tag{
+  display:inline-block;
+  background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.25);
+  color:var(--red2);font-size:0.7rem;font-weight:600;letter-spacing:1.5px;
+  text-transform:uppercase;padding:4px 14px;border-radius:50px;margin-bottom:12px;
+}
+.sh h2{font-family:'Baloo 2',cursive,sans-serif;font-weight:800;font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.15}
+.sh p{color:var(--muted);margin-top:8px;max-width:480px;font-size:0.95rem}
+
+/* SERVICES */
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.srv{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  padding:24px 20px;
+  transition:border-color 0.2s,transform 0.2s,background 0.2s;
+  cursor:default;
+}
+.srv:hover{
+  border-color:var(--border2);background:var(--card2);
+  transform:translateY(-3px);
+}
+.srv-ic{
+  width:44px;height:44px;border-radius:10px;
+  background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;margin-bottom:14px;
+}
+.srv-name{font-weight:600;font-size:0.95rem;margin-bottom:5px}
+.srv-desc{font-size:0.8rem;color:var(--muted);line-height:1.55}
+
+/* DIVIDER */
+hr{border:none;border-top:1px solid var(--border);margin:0 24px}
+
+/* WHY */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.why{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  padding:28px 22px;text-align:center;
+  transition:border-color 0.2s,transform 0.2s;
+}
+.why:hover{border-color:var(--border2);transform:translateY(-3px)}
+.why-ic{
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(58,134,255,0.08);border:1px solid rgba(58,134,255,0.2);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;margin:0 auto 14px;
+}
+.why-t{font-weight:600;font-size:0.95rem;
+  background:linear-gradient(135deg,var(--white),var(--muted));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:6px;
+}
+.why-d{font-size:0.8rem;color:var(--muted);line-height:1.55}
+
+/* CONTACT */
+.contact-box{
+  background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:40px;overflow:hidden;position:relative;
+  display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;
+}
+@media(max-width:620px){.contact-box{grid-template-columns:1fr;padding:28px 22px}}
+.contact-box::before{
+  content:'';position:absolute;top:-1px;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--red),var(--gold),transparent);
+}
+.ci{display:flex;gap:14px;margin-bottom:22px}
+.ci:last-child{margin-bottom:0}
+.ci-icon{
+  width:42px;height:42px;flex-shrink:0;border-radius:10px;
+  background:rgba(255,255,255,0.04);border:1px solid var(--border2);
+  display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+}
+.ci-label{font-size:0.68rem;color:var(--muted);margin-bottom:3px;letter-spacing:0.5px}
+.ci-val{font-size:0.95rem;font-weight:600;color:var(--white);line-height:1.5}
+.ci-val a{color:inherit;text-decoration:none}
+.cta-col{display:flex;flex-direction:column;gap:12px}
+.cta-call{
+  background:linear-gradient(135deg,var(--red),#c1121f);
+  color:#fff;padding:14px 24px;border-radius:12px;
+  text-decoration:none;font-weight:600;font-size:0.9rem;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  box-shadow:0 6px 24px rgba(230,57,70,0.3);
+}
+.cta-wa{
+  background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.25);
+  color:#25d366;padding:14px 24px;border-radius:12px;
+  text-decoration:none;font-weight:600;font-size:0.9rem;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+}
+.cta-call svg,.cta-wa svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+
+/* MAPS BOX CLICKABLE LINK */
+.maps-box{
+  background:rgba(255,255,255,0.03);border:1px solid var(--border);
+  border-radius:12px;padding:16px 18px;text-decoration:none;display:block;
+  color:inherit;transition:background 0.2s,border-color 0.2s;
+}
+.maps-box:hover{background:rgba(255,255,255,0.06);border-color:var(--border2)}
+.maps-box .ml{font-size:0.68rem;color:var(--muted);margin-bottom:4px}
+.maps-box .mn{font-size:0.9rem;font-weight:600;color:var(--white)}
+.maps-box .ma{font-size:0.75rem;color:var(--muted);margin-top:2px}
+
+/* FOOTER */
+footer{
+  position:relative;z-index:1;
+  background:var(--card);border-top:1px solid var(--border);
+  text-align:center;padding:28px 24px;
+}
+.f-logo{
+  font-family:'Baloo 2',cursive,sans-serif;font-weight:800;font-size:1rem;
+  background:linear-gradient(135deg,var(--gold),var(--red2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:6px;
+}
+footer p{font-size:0.78rem;color:var(--muted)}
+footer a{color:var(--muted);text-decoration:none}
+
+/* FADE IN */
+.fade{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">
+    🔧 मां वैष्णो
+    <small>ऑटो पार्ट्स एंड रिपेयर सेंटर</small>
+  </div>
+  <a class="nav-btn" href="tel:9336838043">
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    कॉल करें
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-chip">
+    <span class="chip-dot"></span>
+    अभी खुले हैं — सुबह 9 से रात 8 बजे तक
+  </div>
+  <h1>
+    <span class="line1">मां वैष्णो</span><br>
+    <span class="line2">ऑटो पार्ट्स</span><br>
+    <span class="line3">एंड रिपेयर सेंटर</span>
+  </h1>
+  <p class="hero-sub">हर तरह की बाइक रिपेयर और असली स्पेयर पार्ट्स — तेज़, सस्ते, और भरोसेमंद।</p>
+  <div class="hero-btns">
+    <a class="btn-call" href="tel:9336838043">
+      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      अभी कॉल करें — 93368 38043
+    </a>
+    <a class="btn-wa" href="https://wa.me/919336838043?text=नमस्ते%2C%20मुझे%20बाइक%20रिपेयर%20चाहिए" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp करें
+    </a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-arrow"></div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat"><div class="stat-n">9+</div><div class="stat-l">साल का अनुभव</div></div>
+  <div class="stat"><div class="stat-n">500+</div><div class="stat-l">खुश ग्राहक</div></div>
+  <div class="stat"><div class="stat-n">9—8</div><div class="stat-l">सातों दिन खुले</div></div>
+  <div class="stat"><div class="stat-n">100%</div><div class="stat-l">असली पार्ट्स</div></div>
+</div>
+
+<!-- SERVICES -->
+<div class="wrap">
+  <div class="sh fade">
+    <span class="sh-tag">हमारी सेवाएं</span>
+    <h2>बाइक की हर ज़रूरत,<br>एक जगह</h2>
+    <p>इंजन से लेकर टायर तक — सब कुछ यहीं होता है।</p>
+  </div>
+  <div class="srv-grid">
+    <div class="srv fade"><div class="srv-ic">🔧</div><div class="srv-name">इंजन रिपेयर</div><div class="srv-desc">ओवरहॉल, पिस्टन, वाल्व और बेयरिंग रिपेयर</div></div>
+    <div class="srv fade"><div class="srv-ic">⚙️</div><div class="srv-name">गियर बॉक्स</div><div class="srv-desc">गियर शिफ्टिंग और ट्रांसमिशन की जांच व मरम्मत</div></div>
+    <div class="srv fade"><div class="srv-ic">🛞</div><div class="srv-name">टायर और ट्यूब</div><div class="srv-desc">पंचर, फिटिंग और व्हील अलाइनमेंट</div></div>
+    <div class="srv fade"><div class="srv-ic">💡</div><div class="srv-name">इलेक्ट्रिकल</div><div class="srv-desc">बैटरी, वायरिंग, लाइट और हॉर्न रिपेयर</div></div>
+    <div class="srv fade"><div class="srv-ic">🛢️</div><div class="srv-name">ऑयल सर्विस</div><div class="srv-desc">इंजन ऑयल, एयर फिल्टर और ऑयल फिल्टर</div></div>
+    <div class="srv fade"><div class="srv-ic">🏍️</div><div class="srv-name">स्पेयर पार्ट्स</div><div class="srv-desc">सभी ब्रांड के असली और क्वालिटी पार्ट्स</div></div>
+    <div class="srv fade"><div class="srv-ic">🔩</div><div class="srv-name">ब्रेक सर्विस</div><div class="srv-desc">ब्रेक पैड, ड्रम और केबल रिपेयर</div></div>
+    <div class="srv fade"><div class="srv-ic">✨</div><div class="srv-name">जनरल सर्विसिंग</div><div class="srv-desc">पूरी बाइक सर्विस — कम कीमत, जल्दी डिलीवरी</div></div>
+  </div>
+</div>
+
+<hr/>
+
+<!-- WHY US -->
+<div class="wrap">
+  <div class="sh fade">
+    <span class="sh-tag">क्यों चुनें</span>
+    <h2>भरोसा, जो दिखता है</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why fade"><div class="why-ic">🤝</div><div class="why-t">ईमानदार कीमत</div><div class="why-d">काम से पहले पूरा अनुमान — कोई छुपा चार्ज नहीं</div></div>
+    <div class="why fade"><div class="why-ic">⚡</div><div class="why-t">जल्दी सर्विस</div><div class="why-d">ज़्यादातर काम उसी दिन पूरा, आपका समय बर्बाद नहीं</div></div>
+    <div class="why fade"><div class="why-ic">🏆</div><div class="why-t">अनुभवी मिस्त्री</div><div class="why-d">सालों के तजुर्बे के साथ हर बाइक को सही किया जाता है</div></div>
+    <div class="why fade"><div class="why-ic">📦</div><div class="why-t">असली पार्ट्स</div><div class="why-d">भरोसेमंद कंपनियों के पार्ट्स — बाइक लंबे समय तक चले</div></div>
+  </div>
+</div>
+
+<hr/>
+
+<!-- CONTACT -->
+<div class="wrap">
+  <div class="sh fade">
+    <span class="sh-tag">संपर्क करें</span>
+    <h2>हमसे मिलें</h2>
+  </div>
+  <div class="contact-box fade">
+    <div>
+      <div class="ci">
+        <div class="ci-icon">📍</div>
+        <div>
+          <div class="ci-label">पता</div>
+          <div class="ci-val">अलावलपुर, बेवर रोड<br>हिंदुस्तान पेट्रोल पंप के पास<br>अलावलपुर मो., उ.प्र. — 206511</div>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">📞</div>
+        <div>
+          <div class="ci-label">फोन नंबर</div>
+          <div class="ci-val"><a href="tel:9336838043">93368 38043</a></div>
+        </div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">🕐</div>
+        <div>
+          <div class="ci-label">खुलने का समय</div>
+          <div class="ci-val"> सुबह 9:00 — रात 8:00<br><span style="font-size:0.8rem;color:var(--muted);font-weight:400">सप्ताह के सातों दिन</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-col">
+      <a class="cta-call" href="tel:9336838043">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        📞 93368 38043 पर कॉल करें
+      </a>
+      <a class="cta-wa" href="https://wa.me/919336838043?text=नमस्ते%2C%20मुझे%20बाइक%20रिपेयर%20चाहिए" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp पर बात करें
+      </a>
+      <a class="maps-box" href="https://maps.google.com/?q=Alawalpur+Bewar+Road" target="_blank" rel="noopener">
+        <div class="ml">📍 Google Maps पर खोजें (क्लिक करें)</div>
+        <div class="mn">मां वैष्णो ऑटो पार्ट्स</div>
+        <div class="ma">हिंदुस्तान पेट्रोल पंप के पास, अलावलपुर</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">🔧 मां वैष्णो ऑटो पार्ट्स एंड रिपेयर सेंटर</div>
+  <p>अलावलपुर, उ.प्र. &nbsp;·&nbsp; <a href="tel:9336838043">93368 38043</a> &nbsp;·&nbsp; सुबह 9 — रात 8</p>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.fade').forEach((el,i)=>{el.style.transitionDelay=(i%4)*0.08+'s';obs.observe(el)});
+</script>
+</body>
+</html>
