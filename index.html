@@ -1,412 +1,517 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="hi" class="h-full scroll-smooth">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>मां वैष्णो ऑटो पार्ट्स एंड रिपेयर सेंटर - अलावलपुर | Bike Repair & Spare Parts Shop</title>
-<meta name="description" content="मां वैष्णो ऑटो पार्ट्स एंड रिपेयर सेंटर, अलावलपुर (बेवर रोड)। यहाँ सभी प्रकार की बाइकों की सर्विसिंग, इंजन रिपेयर, पंचर, और असली स्पेयर पार्ट्स उचित दामों पर मिलते हैं। समय: सुबह 9 से रात 8 बजे तक।"/>
-<meta name="keywords" content="Ma Vaishno Auto Parts Alawalpur, Bike Repair Shop in Alawalpur, Two Wheeler Mechanic Bewar Road, Bike Spare Parts, Motorcycle Repair, Engine Repair, Bike Service near me, मां वैष्णो ऑटो पार्ट्स, बाइक रिपेयरिंग दुकान"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#080c14;
-  --card:#0e1624;
-  --card2:#121e30;
-  --border:rgba(255,255,255,0.07);
-  --border2:rgba(255,255,255,0.12);
-  --red:#e63946;
-  --red2:#ff6b6b;
-  --gold:#f4c430;
-  --blue:#3a86ff;
-  --green:#06d6a0;
-  --white:#f0f4ff;
-  --muted:#8899aa;
-  --r:14px;
-}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);line-height:1.6;overflow-x:hidden}
-
-/* GLOW ORBS */
-.orb{position:fixed;border-radius:50%;filter:blur(80px);opacity:0.18;pointer-events:none;z-index:0}
-.orb1{width:500px;height:500px;background:#3a86ff;top:-150px;left:-150px}
-.orb2{width:400px;height:400px;background:#e63946;bottom:-100px;right:-100px}
-
-/* NAV */
-nav{
-  position:sticky;top:0;z-index:100;
-  background:rgba(8,12,20,0.85);backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
-  padding:0 24px;height:64px;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.logo{
-  font-family:'Baloo 2',cursive,sans-serif;font-weight:800;font-size:1.05rem;
-  background:linear-gradient(135deg,#f4c430,#ff6b6b);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  line-height:1.1;
-}
-.logo small{display:block;font-size:0.6rem;font-weight:600;-webkit-text-fill-color:#8899aa;font-family:'Inter',sans-serif}
-.nav-btn{
-  background:var(--red);color:#fff;text-decoration:none;
-  padding:9px 20px;border-radius:50px;font-size:0.8rem;font-weight:600;
-  display:flex;align-items:center;gap:6px;
-  box-shadow:0 0 20px rgba(230,57,70,0.4);
-  transition:box-shadow 0.2s;
-}
-.nav-btn:hover{box-shadow:0 0 30px rgba(230,57,70,0.6)}
-
-/* HERO */
-.hero{
-  position:relative;z-index:1;
-  min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  text-align:center;padding:60px 24px 80px;
-  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(58,134,255,0.12) 0%,transparent 70%);
-}
-.hero-chip{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(255,255,255,0.05);border:1px solid var(--border2);
-  border-radius:50px;padding:6px 16px;font-size:0.75rem;color:var(--muted);
-  margin-bottom:28px;
-}
-.chip-dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 8px var(--green)}
-.hero h1{
-  font-family:'Baloo 2',cursive,sans-serif;font-weight:800;
-  font-size:clamp(2rem,7vw,4rem);line-height:1.08;
-  margin-bottom:20px;letter-spacing:-0.5px;
-}
-.hero h1 .line1{color:var(--white)}
-.hero h1 .line2{
-  background:linear-gradient(135deg,var(--gold) 0%,var(--red2) 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.hero h1 .line3{color:var(--white);opacity:0.85}
-.hero-sub{color:var(--muted);font-size:1.05rem;max-width:440px;margin:0 auto 36px;line-height:1.7}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn-call{
-  background:linear-gradient(135deg,var(--red),#c1121f);
-  color:#fff;padding:14px 30px;border-radius:50px;
-  text-decoration:none;font-weight:600;font-size:0.95rem;
-  display:inline-flex;align-items:center;gap:9px;
-  box-shadow:0 8px 32px rgba(230,57,70,0.35);
-  transition:transform 0.2s,box-shadow 0.2s;
-}
-.btn-call:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(230,57,70,0.5)}
-.btn-wa{
-  background:rgba(37,211,102,0.12);border:1px solid rgba(37,211,102,0.3);
-  color:#25d366;padding:14px 30px;border-radius:50px;
-  text-decoration:none;font-weight:600;font-size:0.95rem;
-  display:inline-flex;align-items:center;gap:9px;
-  transition:background 0.2s,transform 0.2s;
-}
-.btn-wa:hover{background:rgba(37,211,102,0.2);transform:translateY(-2px)}
-.btn-call svg,.btn-wa svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
-
-/* SCROLL INDICATOR */
-.scroll-hint{
-  position:absolute;bottom:30px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:6px;
-  font-size:0.7rem;color:var(--muted);opacity:0.6;
-}
-.scroll-arrow{
-  width:20px;height:20px;border-right:1.5px solid var(--muted);
-  border-bottom:1.5px solid var(--muted);
-  transform:rotate(45deg);
-  animation:bounce 1.5s infinite;
-}
-@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(4px)}}
-
-/* STATS */
-.stats-bar{
-  position:relative;z-index:1;
-  display:grid;grid-template-columns:repeat(4,1fr);
-  background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);
-}
-@media(max-width:600px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
-.stat{
-  padding:24px 16px;text-align:center;
-  border-right:1px solid var(--border);
-}
-.stat:last-child{border-right:none}
-.stat-n{
-  font-family:'Baloo 2',cursive,sans-serif;font-size:1.8rem;font-weight:800;
-  background:linear-gradient(135deg,var(--gold),var(--red2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  line-height:1;
-}
-.stat-l{font-size:0.72rem;color:var(--muted);margin-top:4px}
-
-/* WRAPPER */
-.wrap{max-width:940px;margin:0 auto;padding:72px 24px;position:relative;z-index:1}
-
-/* SECTION HEADER */
-.sh{margin-bottom:40px}
-.sh-tag{
-  display:inline-block;
-  background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.25);
-  color:var(--red2);font-size:0.7rem;font-weight:600;letter-spacing:1.5px;
-  text-transform:uppercase;padding:4px 14px;border-radius:50px;margin-bottom:12px;
-}
-.sh h2{font-family:'Baloo 2',cursive,sans-serif;font-weight:800;font-size:clamp(1.5rem,4vw,2.2rem);line-height:1.15}
-.sh p{color:var(--muted);margin-top:8px;max-width:480px;font-size:0.95rem}
-
-/* SERVICES */
-.srv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
-.srv{
-  background:var(--card);border:1px solid var(--border);border-radius:var(--r);
-  padding:24px 20px;
-  transition:border-color 0.2s,transform 0.2s,background 0.2s;
-  cursor:default;
-}
-.srv:hover{
-  border-color:var(--border2);background:var(--card2);
-  transform:translateY(-3px);
-}
-.srv-ic{
-  width:44px;height:44px;border-radius:10px;
-  background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.2);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.3rem;margin-bottom:14px;
-}
-.srv-name{font-weight:600;font-size:0.95rem;margin-bottom:5px}
-.srv-desc{font-size:0.8rem;color:var(--muted);line-height:1.55}
-
-/* DIVIDER */
-hr{border:none;border-top:1px solid var(--border);margin:0 24px}
-
-/* WHY */
-.why-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
-.why{
-  background:var(--card);border:1px solid var(--border);border-radius:var(--r);
-  padding:28px 22px;text-align:center;
-  transition:border-color 0.2s,transform 0.2s;
-}
-.why:hover{border-color:var(--border2);transform:translateY(-3px)}
-.why-ic{
-  width:52px;height:52px;border-radius:50%;
-  background:rgba(58,134,255,0.08);border:1px solid rgba(58,134,255,0.2);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.5rem;margin:0 auto 14px;
-}
-.why-t{font-weight:600;font-size:0.95rem;
-  background:linear-gradient(135deg,var(--white),var(--muted));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  margin-bottom:6px;
-}
-.why-d{font-size:0.8rem;color:var(--muted);line-height:1.55}
-
-/* CONTACT */
-.contact-box{
-  background:var(--card);border:1px solid var(--border);border-radius:20px;
-  padding:40px;overflow:hidden;position:relative;
-  display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;
-}
-@media(max-width:620px){.contact-box{grid-template-columns:1fr;padding:28px 22px}}
-.contact-box::before{
-  content:'';position:absolute;top:-1px;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,transparent,var(--red),var(--gold),transparent);
-}
-.ci{display:flex;gap:14px;margin-bottom:22px}
-.ci:last-child{margin-bottom:0}
-.ci-icon{
-  width:42px;height:42px;flex-shrink:0;border-radius:10px;
-  background:rgba(255,255,255,0.04);border:1px solid var(--border2);
-  display:flex;align-items:center;justify-content:center;font-size:1.1rem;
-}
-.ci-label{font-size:0.68rem;color:var(--muted);margin-bottom:3px;letter-spacing:0.5px}
-.ci-val{font-size:0.95rem;font-weight:600;color:var(--white);line-height:1.5}
-.ci-val a{color:inherit;text-decoration:none}
-.cta-col{display:flex;flex-direction:column;gap:12px}
-.cta-call{
-  background:linear-gradient(135deg,var(--red),#c1121f);
-  color:#fff;padding:14px 24px;border-radius:12px;
-  text-decoration:none;font-weight:600;font-size:0.9rem;
-  display:flex;align-items:center;justify-content:center;gap:9px;
-  box-shadow:0 6px 24px rgba(230,57,70,0.3);
-}
-.cta-wa{
-  background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.25);
-  color:#25d366;padding:14px 24px;border-radius:12px;
-  text-decoration:none;font-weight:600;font-size:0.9rem;
-  display:flex;align-items:center;justify-content:center;gap:9px;
-}
-.cta-call svg,.cta-wa svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
-
-/* MAPS BOX CLICKABLE LINK */
-.maps-box{
-  background:rgba(255,255,255,0.03);border:1px solid var(--border);
-  border-radius:12px;padding:16px 18px;text-decoration:none;display:block;
-  color:inherit;transition:background 0.2s,border-color 0.2s;
-}
-.maps-box:hover{background:rgba(255,255,255,0.06);border-color:var(--border2)}
-.maps-box .ml{font-size:0.68rem;color:var(--muted);margin-bottom:4px}
-.maps-box .mn{font-size:0.9rem;font-weight:600;color:var(--white)}
-.maps-box .ma{font-size:0.75rem;color:var(--muted);margin-top:2px}
-
-/* FOOTER */
-footer{
-  position:relative;z-index:1;
-  background:var(--card);border-top:1px solid var(--border);
-  text-align:center;padding:28px 24px;
-}
-.f-logo{
-  font-family:'Baloo 2',cursive,sans-serif;font-weight:800;font-size:1rem;
-  background:linear-gradient(135deg,var(--gold),var(--red2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  margin-bottom:6px;
-}
-footer p{font-size:0.78rem;color:var(--muted)}
-footer a{color:var(--muted);text-decoration:none}
-
-/* FADE IN */
-.fade{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
-.fade.in{opacity:1;transform:none}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मां वैष्णो ऑटो पार्ट एंड रिपेयर सेंटर | Mohammadabad Farrukhabad</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome v6.4.0 CDN (Fully Verified) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-<div class="orb orb1"></div>
-<div class="orb orb2"></div>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-orange-500 selection:text-white">
 
-<!-- NAV -->
-<nav>
-  <div class="logo">
-    🔧 मां वैष्णो
-    <small>ऑटो पार्ट्स एंड रिपेयर सेंटर</small>
-  </div>
-  <a class="nav-btn" href="tel:9336838043">
-    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-    कॉल करें
-  </a>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-chip">
-    <span class="chip-dot"></span>
-    अभी खुले हैं — सुबह 9 से रात 8 बजे तक
-  </div>
-  <h1>
-    <span class="line1">मां वैष्णो</span><br>
-    <span class="line2">ऑटो पार्ट्स</span><br>
-    <span class="line3">एंड रिपेयर सेंटर</span>
-  </h1>
-  <p class="hero-sub">हर तरह की बाइक रिपेयर और असली स्पेयर पार्ट्स — तेज़, सस्ते, और भरोसेमंद।</p>
-  <div class="hero-btns">
-    <a class="btn-call" href="tel:9336838043">
-      <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      अभी कॉल करें — 93368 38043
-    </a>
-    <a class="btn-wa" href="https://wa.me/919336838043?text=नमस्ते%2C%20मुझे%20बाइक%20रिपेयर%20चाहिए" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp करें
-    </a>
-  </div>
-  <div class="scroll-hint">
-    <div class="scroll-arrow"></div>
-  </div>
-</div>
-
-<!-- STATS -->
-<div class="stats-bar">
-  <div class="stat"><div class="stat-n">9+</div><div class="stat-l">साल का अनुभव</div></div>
-  <div class="stat"><div class="stat-n">500+</div><div class="stat-l">खुश ग्राहक</div></div>
-  <div class="stat"><div class="stat-n">9—8</div><div class="stat-l">सातों दिन खुले</div></div>
-  <div class="stat"><div class="stat-n">100%</div><div class="stat-l">असली पार्ट्स</div></div>
-</div>
-
-<!-- SERVICES -->
-<div class="wrap">
-  <div class="sh fade">
-    <span class="sh-tag">हमारी सेवाएं</span>
-    <h2>बाइक की हर ज़रूरत,<br>एक जगह</h2>
-    <p>इंजन से लेकर टायर तक — सब कुछ यहीं होता है।</p>
-  </div>
-  <div class="srv-grid">
-    <div class="srv fade"><div class="srv-ic">🔧</div><div class="srv-name">इंजन रिपेयर</div><div class="srv-desc">ओवरहॉल, पिस्टन, वाल्व और बेयरिंग रिपेयर</div></div>
-    <div class="srv fade"><div class="srv-ic">⚙️</div><div class="srv-name">गियर बॉक्स</div><div class="srv-desc">गियर शिफ्टिंग और ट्रांसमिशन की जांच व मरम्मत</div></div>
-    <div class="srv fade"><div class="srv-ic">🛞</div><div class="srv-name">टायर और ट्यूब</div><div class="srv-desc">पंचर, फिटिंग और व्हील अलाइनमेंट</div></div>
-    <div class="srv fade"><div class="srv-ic">💡</div><div class="srv-name">इलेक्ट्रिकल</div><div class="srv-desc">बैटरी, वायरिंग, लाइट और हॉर्न रिपेयर</div></div>
-    <div class="srv fade"><div class="srv-ic">🛢️</div><div class="srv-name">ऑयल सर्विस</div><div class="srv-desc">इंजन ऑयल, एयर फिल्टर और ऑयल फिल्टर</div></div>
-    <div class="srv fade"><div class="srv-ic">🏍️</div><div class="srv-name">स्पेयर पार्ट्स</div><div class="srv-desc">सभी ब्रांड के असली और क्वालिटी पार्ट्स</div></div>
-    <div class="srv fade"><div class="srv-ic">🔩</div><div class="srv-name">ब्रेक सर्विस</div><div class="srv-desc">ब्रेक पैड, ड्रम और केबल रिपेयर</div></div>
-    <div class="srv fade"><div class="srv-ic">✨</div><div class="srv-name">जनरल सर्विसिंग</div><div class="srv-desc">पूरी बाइक सर्विस — कम कीमत, जल्दी डिलीवरी</div></div>
-  </div>
-</div>
-
-<hr/>
-
-<!-- WHY US -->
-<div class="wrap">
-  <div class="sh fade">
-    <span class="sh-tag">क्यों चुनें</span>
-    <h2>भरोसा, जो दिखता है</h2>
-  </div>
-  <div class="why-grid">
-    <div class="why fade"><div class="why-ic">🤝</div><div class="why-t">ईमानदार कीमत</div><div class="why-d">काम से पहले पूरा अनुमान — कोई छुपा चार्ज नहीं</div></div>
-    <div class="why fade"><div class="why-ic">⚡</div><div class="why-t">जल्दी सर्विस</div><div class="why-d">ज़्यादातर काम उसी दिन पूरा, आपका समय बर्बाद नहीं</div></div>
-    <div class="why fade"><div class="why-ic">🏆</div><div class="why-t">अनुभवी मिस्त्री</div><div class="why-d">सालों के तजुर्बे के साथ हर बाइक को सही किया जाता है</div></div>
-    <div class="why fade"><div class="why-ic">📦</div><div class="why-t">असली पार्ट्स</div><div class="why-d">भरोसेमंद कंपनियों के पार्ट्स — बाइक लंबे समय तक चले</div></div>
-  </div>
-</div>
-
-<hr/>
-
-<!-- CONTACT -->
-<div class="wrap">
-  <div class="sh fade">
-    <span class="sh-tag">संपर्क करें</span>
-    <h2>हमसे मिलें</h2>
-  </div>
-  <div class="contact-box fade">
-    <div>
-      <div class="ci">
-        <div class="ci-icon">📍</div>
-        <div>
-          <div class="ci-label">पता</div>
-          <div class="ci-val">अलावलपुर, बेवर रोड<br>हिंदुस्तान पेट्रोल पंप के पास<br>अलावलपुर मो., उ.प्र. — 206511</div>
+    <!-- Top Glow Header Bar -->
+    <div class="bg-gradient-to-r from-orange-600 via-amber-600 to-red-600 text-white py-2.5 px-4 text-xs sm:text-sm font-medium shadow-lg shadow-orange-900/25">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-2 text-center sm:text-left">
+                <span class="flex h-2 w-2 relative shrink-0" aria-hidden="true">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+                </span>
+                <span><i class="fa-solid fa-location-dot ml-1 mr-1 text-orange-200" aria-hidden="true"></i> अल्लाबलपुर, बेवर रोड, मोहम्मदाबाद, फर्रुखाबाद (तकीपुर पेट्रोल पंप के पास)</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:9336838043" class="hover:underline flex items-center font-bold bg-white/15 px-3 py-1.5 rounded-full transition hover:bg-white/25 focus:outline-none focus:ring-2 focus:ring-white"><i class="fa-solid fa-phone-volume mr-1.5" aria-hidden="true"></i> 093368 38043</a>
+                <a href="https://wa.me/919336838043" target="_blank" rel="noopener noreferrer" class="hover:underline flex items-center bg-emerald-600 hover:bg-emerald-500 transition px-3.5 py-1.5 rounded-full text-white font-bold shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-400"><i class="fa-brands fa-whatsapp mr-1.5 text-base" aria-hidden="true"></i> WhatsApp</a>
+            </div>
         </div>
-      </div>
-      <div class="ci">
-        <div class="ci-icon">📞</div>
-        <div>
-          <div class="ci-label">फोन नंबर</div>
-          <div class="ci-val"><a href="tel:9336838043">93368 38043</a></div>
-        </div>
-      </div>
-      <div class="ci">
-        <div class="ci-icon">🕐</div>
-        <div>
-          <div class="ci-label">खुलने का समय</div>
-          <div class="ci-val"> सुबह 9:00 — रात 8:00<br><span style="font-size:0.8rem;color:var(--muted);font-weight:400">सप्ताह के सातों दिन</span></div>
-        </div>
-      </div>
     </div>
-    <div class="cta-col">
-      <a class="cta-call" href="tel:9336838043">
-        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-        📞 93368 38043 पर कॉल करें
-      </a>
-      <a class="cta-wa" href="https://wa.me/919336838043?text=नमस्ते%2C%20मुझे%20बाइक%20रिपेयर%20चाहिए" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp पर बात करें
-      </a>
-      <a class="maps-box" href="https://maps.google.com/?q=Alawalpur+Bewar+Road" target="_blank" rel="noopener">
-        <div class="ml">📍 Google Maps पर खोजें (क्लिक करें)</div>
-        <div class="mn">मां वैष्णो ऑटो पार्ट्स</div>
-        <div class="ma">हिंदुस्तान पेट्रोल पंप के पास, अलावलपुर</div>
-      </a>
+
+    <!-- Modern Glassmorphism Navigation Bar -->
+    <nav class="sticky top-0 z-45 bg-slate-950/85 backdrop-blur-xl border-b border-slate-800/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-tr from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-500/30 text-white text-2xl font-black shrink-0">
+                    <i class="fa-solid fa-motorcycle" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm sm:text-base font-extrabold tracking-tight text-white flex items-center gap-1.5 flex-wrap">
+                        मां वैष्णो ऑटो पार्ट्स <span class="text-[10px] bg-orange-500/20 text-orange-400 px-2 py-0.5 rounded-md border border-orange-500/30 font-semibold">विशेषज्ञ</span>
+                    </h1>
+                    <p class="text-xs text-slate-400 font-medium">एंड रिपेयरिंग सेंटर (मैकेनिक विवेक जी)</p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#services" class="text-slate-300 hover:text-orange-400 transition-colors focus:outline-none focus:text-orange-400">सेवाएं</a>
+                <a href="#about" class="text-slate-300 hover:text-orange-400 transition-colors focus:outline-none focus:text-orange-400">हमारे बारे में</a>
+                <a href="#parts" class="text-slate-300 hover:text-orange-400 transition-colors focus:outline-none focus:text-orange-400">ऑटो पार्ट्स</a>
+                <a href="#areas" class="text-slate-300 hover:text-orange-400 transition-colors focus:outline-none focus:text-orange-400">सर्विस एरिया</a>
+                <a href="#contact" class="text-slate-300 hover:text-orange-400 transition-colors focus:outline-none focus:text-orange-400">संपर्क</a>
+                <button onclick="openBookingModal()" class="px-5 py-2.5 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold rounded-xl shadow-lg shadow-orange-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-400">
+                    <i class="fa-solid fa-calendar-check mr-1.5" aria-hidden="true"></i> सर्विस बुक करें
+                </button>
+            </div>
+            <button onclick="toggleMobileMenu()" aria-label="Toggle mobile menu" id="menu-btn" class="md:hidden text-2xl text-slate-300 hover:text-white p-2.5 rounded-xl bg-slate-900 border border-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                <i class="fa-solid fa-bars" id="menu-icon" aria-hidden="true"></i>
+            </button>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 backdrop-blur-2xl border-b border-slate-800 px-6 py-6 space-y-4 shadow-2xl transition-all">
+            <a href="#services" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-orange-400 py-1">सेवाएं</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-orange-400 py-1">हमारे बारे में</a>
+            <a href="#parts" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-orange-400 py-1">ऑटो पार्ट्स</a>
+            <a href="#areas" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-orange-400 py-1">सर्विस एरिया</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-base font-medium text-slate-200 hover:text-orange-400 py-1">संपर्क</a>
+            <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full py-3.5 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold rounded-xl shadow-lg shadow-orange-500/20 text-center">
+                सर्विस बुक करें
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-20 lg:py-28 px-4 sm:px-6 lg:px-8 border-b border-slate-800/50">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-orange-600/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full text-xs font-semibold bg-orange-500/10 text-orange-400 border border-orange-500/20 shadow-inner">
+                    <i class="fa-solid fa-award text-amber-400"></i>
+                    <span>फर्रुखाबाद का सबसे भरोसेमंद ऑटो रिपेयर सेंटर</span>
+                </div>
+                <h2 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">
+                    आपकी गाड़ी की देखभाल, <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-red-500">पूरी ईमानदारी और परफेक्शन के साथ</span>
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                    नमस्कार दोस्तों! मां वैष्णो ऑटो पार्ट्स एंड रिपेयरिंग सेंटर में आपका स्वागत है। अनुभवी मैकेनिक <strong>विवेक जी</strong> द्वारा हर छोटी-बड़ी समस्या का सटीक समाधान।
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                    <a href="tel:9336838043" class="px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold rounded-2xl shadow-xl shadow-orange-500/30 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 focus:outline-none focus:ring-2 focus:ring-orange-400">
+                        <i class="fa-solid fa-phone text-lg" aria-hidden="true"></i> 093368 38043 पर कॉल करें
+                    </a>
+                    <a href="https://wa.me/919336838043" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-slate-900/80 hover:bg-slate-800 text-white font-bold border border-slate-700/80 rounded-2xl transition-all flex items-center justify-center gap-2 backdrop-blur-md focus:outline-none focus:ring-2 focus:ring-emerald-400">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-2xl" aria-hidden="true"></i> WhatsApp चैट
+                    </a>
+                </div>
+                <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+                    <div>
+                        <p class="text-2xl font-black text-orange-400">5+ वर्ष</p>
+                        <p class="text-xs text-slate-400">विश्वसनीय सेवा</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-black text-orange-400">100%</p>
+                        <p class="text-xs text-slate-400">जेन्युइन पार्ट्स</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-black text-orange-400">विवेक जी</p>
+                        <p class="text-xs text-slate-400">विशेषज्ञ मैकेनिक</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative">
+                <div class="absolute -inset-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
+                <div class="relative bg-slate-900/90 backdrop-blur-2xl border border-slate-800 p-8 rounded-3xl shadow-2xl space-y-6">
+                    <div class="flex items-center space-x-4 border-b border-slate-800 pb-5">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500/20 to-amber-500/20 text-orange-400 rounded-2xl flex items-center justify-center text-3xl font-bold border border-orange-500/30 shrink-0">
+                            <i class="fa-solid fa-wrench"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-extrabold text-xl text-white">मैकेनिक डेस्क</h3>
+                            <p class="text-xs text-orange-400 font-semibold tracking-wide">मां वैष्णो ऑटो पार्ट्स एंड रिपेयरिंग</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-800/50 border border-slate-800">
+                            <span class="text-slate-400 flex items-center gap-2"><i class="fa-solid fa-clock text-orange-400"></i> समय सारणी</span>
+                            <span class="font-bold text-slate-200">सोम - रवि (9 AM - 8 PM)</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-800/50 border border-slate-800">
+                            <span class="text-slate-400 flex items-center gap-2"><i class="fa-solid fa-location-dot text-orange-400"></i> मुख्य लैंडमार्क</span>
+                            <span class="font-bold text-slate-200 text-right">तकीपुर पेट्रोल पंप के पास</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-800/50 border border-slate-800">
+                            <span class="text-slate-400 flex items-center gap-2"><i class="fa-solid fa-calendar-days text-orange-400"></i> स्थापना</span>
+                            <span class="font-bold text-slate-200">15 मार्च 2019 से सक्रिय</span>
+                        </div>
+                    </div>
+                    <button onclick="openBookingModal()" class="w-full py-3.5 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold rounded-2xl shadow-lg shadow-orange-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-400">
+                        <i class="fa-solid fa-bolt" aria-hidden="true"></i> तुरंत संपर्क या अपॉइंटमेंट लें
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-orange-400 bg-orange-500/10 px-3.5 py-1.5 rounded-full border border-orange-500/20">हमारी सेवाएं (Our Services)</span>
+            <h2 class="text-3xl sm:text-5xl font-black tracking-tight">विशेषज्ञता के साथ बेहतरीन रिपेयरिंग</h2>
+            <p class="text-slate-400 text-sm sm:text-base">आपकी गाड़ी की लंबी उम्र और सुरक्षित सफर के लिए हमारी प्रमुख सेवाएं:</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-gradient-to-b from-slate-900 to-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all group shadow-xl">
+                <div class="w-16 h-16 bg-gradient-to-br from-orange-500/20 to-amber-500/20 text-orange-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform border border-orange-500/30">
+                    <i class="fa-solid fa-oil-can"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-white">फुल सर्विसिंग</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    इंजन ऑयल, एयर फिल्टर, स्पार्क प्लग, चेन लुब्रिकेशन और ब्रेक एडजस्टमेंट — सभी काम अत्यंत बारीकी और तन्मयता से किए जाते हैं।
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-gradient-to-b from-slate-900 to-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all group shadow-xl">
+                <div class="w-16 h-16 bg-gradient-to-br from-orange-500/20 to-amber-500/20 text-orange-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform border border-orange-500/30">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-white">इंजन रिपेयर</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    इंजन में आवाज, कम पिकअप या धुआं — पूरी जाँच करके खराब पुर्जे बदले जाते हैं ताकि गाड़ी मक्खन जैसी चले।
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-gradient-to-b from-slate-900 to-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all group shadow-xl">
+                <div class="w-16 h-16 bg-gradient-to-br from-orange-500/20 to-amber-500/20 text-orange-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform border border-orange-500/30">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-white">इलेक्ट्रिकल रिपेयर</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    गाड़ी की लाइट, बैटरी, सेल्फ स्टार्ट और वायरिंग की सभी समस्याओं का सटीक समाधान आधुनिक उपकरणों द्वारा।
+                </p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-gradient-to-b from-slate-900 to-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all group shadow-xl">
+                <div class="w-16 h-16 bg-gradient-to-br from-orange-500/20 to-amber-500/20 text-orange-400 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform border border-orange-500/30">
+                    <i class="fa-solid fa-gauge-high"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-3 text-white">ब्रेक व सस्पेंशन</h3>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                    ब्रेक पैड, शूज़, शॉक ऑब्जर्वर व सस्पेंशन की पूर्ण जाँच ताकि हर सफर सुरक्षित और आरामदायक हो।
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Shop & Expertise -->
+    <section id="about" class="py-24 bg-slate-900/60 border-y border-slate-800/80 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 space-y-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-400 bg-orange-500/10 px-3.5 py-1.5 rounded-full border border-orange-500/20">हमारे बारे में</span>
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight">विश्वास, ईमानदारी और गुणवत्ता</h2>
+                <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                    मां वैष्णो ऑटो पार्ट्स एंड रिपेयरिंग सेंटर 15 मार्च 2019 से लगातार ग्राहकों की सेवा में समर्पित है। हम अल्लाबलपुर, बेवर रोड, मोहम्मदाबाद (हिंदुस्तान पेट्रोल पंप, तकीपुर के पास) स्थित हैं।
+                </p>
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
+                        <div class="w-8 h-8 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-sm mt-0.5 shrink-0 border border-orange-500/30"><i class="fa-solid fa-check"></i></div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">पारदर्शी कार्यशैली</h4>
+                            <p class="text-xs text-slate-400">हर ग्राहक की गाड़ी की देखभाल पूरी जिम्मेदारी और पारदर्शिता के साथ की जाती है।</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4 p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
+                        <div class="w-8 h-8 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-sm mt-0.5 shrink-0 border border-orange-500/30"><i class="fa-solid fa-check"></i></div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white">विशेषज्ञ विवेक जी</h4>
+                            <p class="text-xs text-slate-400">अनुभवी मैकेनिक विवेक जी द्वारा छोटी से छोटी तकनीकी समस्या का सटीक समाधान।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 bg-slate-900 border border-slate-800 p-8 sm:p-10 rounded-3xl shadow-2xl relative">
+                <div class="absolute top-0 right-0 transform translate-x-2 -translate-y-2 bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 font-black text-xs px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
+                    Established 2019
+                </div>
+                <h3 class="text-2xl font-black mb-6 text-white flex items-center gap-2">
+                    <i class="fa-solid fa-store text-orange-400"></i> दुकान की मुख्य विशेषताएं
+                </h3>
+                <div class="space-y-4 text-sm">
+                    <div class="flex items-center justify-between py-3 border-b border-slate-800">
+                        <span class="text-slate-400">दुकान का नाम</span>
+                        <span class="font-bold text-white text-right">मां वैष्णो ऑटो पार्ट एंड रिपेयर सेंटर</span>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-b border-slate-800">
+                        <span class="text-slate-400">मुख्य मैकेनिक</span>
+                        <span class="font-bold text-orange-400">विवेक जी</span>
+                    </div>
+                    <div class="flex items-center justify-between py-3 border-b border-slate-800">
+                        <span class="text-slate-400">कैटेगरी</span>
+                        <span class="font-bold text-white text-right">मोटर स्कूटर रिपेयर & पार्ट्स स्टोर</span>
+                    </div>
+                    <div class="flex items-center justify-between py-3">
+                        <span class="text-slate-400">संपर्क नंबर</span>
+                        <a href="tel:9336838043" class="font-bold text-orange-400 hover:underline">093368 38043</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auto Parts Store Section -->
+    <section id="parts" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-orange-400 bg-orange-500/10 px-3.5 py-1.5 rounded-full border border-orange-500/20">ऑटो पार्ट्स स्टोर</span>
+            <h2 class="text-3xl sm:text-5xl font-black tracking-tight">जेन्युइन स्पेयर पार्ट्स व मोबिल ऑयल</h2>
+            <p class="text-slate-400 text-sm sm:text-base">गाड़ियों के लिए सभी प्रकार के असली पार्ट्स उचित दामों पर उपलब्ध हैं।</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all group shadow-xl">
+                <div class="text-4xl text-orange-400 mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-oil-can"></i></div>
+                <h4 class="font-bold text-base text-white">इंजन ऑयल</h4>
+                <p class="text-xs text-slate-400 mt-1">बेस्ट ब्रांड्स उपलब्ध</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all group shadow-xl">
+                <div class="text-4xl text-orange-400 mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-car-battery"></i></div>
+                <h4 class="font-bold text-base text-white">बैटरी व प्लग</h4>
+                <p class="text-xs text-slate-400 mt-1">लंबी लाइफ गारंटी</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all group shadow-xl">
+                <div class="text-4xl text-orange-400 mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-link"></i></div>
+                <h4 class="font-bold text-base text-white">चेन और स्प्रोकेट</h4>
+                <p class="text-xs text-slate-400 mt-1">मजबूत पकड़</p>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-orange-500/50 transition-all group shadow-xl">
+                <div class="text-4xl text-orange-400 mb-4 group-hover:scale-110 transition-transform"><i class="fa-solid fa-shield-halved"></i></div>
+                <h4 class="font-bold text-base text-white">ब्रेक पैड व शूज</h4>
+                <p class="text-xs text-slate-400 mt-1">सुरक्षित ब्रेकिंग</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas Section -->
+    <section id="areas" class="py-20 bg-slate-900/60 border-t border-slate-800/80 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest text-orange-400 bg-orange-500/10 px-3.5 py-1.5 rounded-full border border-orange-500/20">सर्विस एरिया (Service Areas)</span>
+            <h2 class="text-3xl sm:text-4xl font-black tracking-tight">इन सभी क्षेत्रों में हमारी सेवाएं उपलब्ध हैं</h2>
+            <p class="text-slate-400 text-sm max-w-2xl mx-auto">अल्लाबलपुर और आसपास के इन सभी गांवों व क्षेत्रों से ग्राहक अपनी गाड़ियों की रिपेयरिंग के लिए आते हैं:</p>
+            <div class="flex flex-wrap justify-center gap-3 pt-4 max-w-4xl mx-auto text-sm">
+                <span class="px-4 py-2 bg-slate-800/80 border border-slate-700/80 text-slate-200 rounded-xl font-medium hover:border-orange-500 transition">अल्लाबलपुर (Allabal Pur)</span>
+                <span class="px-4 py-2 bg-slate-800/80 border border-slate-700/80 text-slate-200 rounded-xl font-medium hover:border-orange-500 transition">तकीपुर (Takipur)</span>
+                <span class="px-4 py-2 bg-slate-800/80 border border-slate-700/80 text-slate-200 rounded-xl font-medium hover:border-orange-500 transition">मोहम्मदाबाद (Mohammadabad)</span>
+                <span class="px-4 py-2 bg-slate-800/80 border border-slate-700/80 text-slate-200 rounded-xl font-medium hover:border-orange-500 transition">पासनिग पुर (Pasnig Pur)</span>
+                <span class="px-4 py-2 bg-slate-800/80 border border-slate-700/80 text-slate-200 rounded-xl font-medium hover:border-orange-500 transition">नदसा (Nadsa)</span>
+                <span class="px-4 py-2 bg-slate-800/80 border border-slate-700/80 text-slate-200 rounded-xl font-medium hover:border-orange-500 transition">गाजीपुर (Gazi Pur)</span>
+                <span class="px-4 py-2 bg-slate-800/80 border border-slate-700/80 text-slate-200 rounded-xl font-medium hover:border-orange-500 transition">खिमसेपुर (Khimsepur)</span>
+                <span class="px-4 py-2 bg-slate-800/80 border border-slate-700/80 text-slate-200 rounded-xl font-medium hover:border-orange-500 transition">हरिकमपुर (Harikampur)</span>
+                <span class="px-4 py-2 bg-slate-800/80 border border-slate-700/80 text-slate-200 rounded-xl font-medium hover:border-orange-500 transition">नगला बहराइच / रठौरा</span>
+                <span class="px-4 py-2 bg-slate-800/80 border border-slate-700/80 text-slate-200 rounded-xl font-medium hover:border-orange-500 transition">दौदपुर माजरा नदसा</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="space-y-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-orange-400 bg-orange-500/10 px-3.5 py-1.5 rounded-full border border-orange-500/20">संपर्क सूत्र (Contact Us)</span>
+                <h2 class="text-3xl sm:text-5xl font-black tracking-tight">दुकान पर पधारें या कॉल करें</h2>
+                <p class="text-slate-300 text-sm sm:text-base">
+                    किसी भी गाड़ी की खराबी या सर्विसिंग के लिए तुरंत संपर्क करें।
+                </p>
+                <div class="space-y-4 pt-2">
+                    <div class="flex items-center space-x-4 p-5 bg-slate-900 border border-slate-800 rounded-2xl shadow-lg">
+                        <div class="w-14 h-14 bg-orange-500/10 text-orange-400 rounded-2xl flex items-center justify-center text-2xl font-bold border border-orange-500/20 shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 font-medium">फ़ोन नंबर (Phone Number)</p>
+                            <a href="tel:9336838043" class="text-lg font-black text-white hover:text-orange-400">093368 38043</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 p-5 bg-slate-900 border border-slate-800 rounded-2xl shadow-lg">
+                        <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl font-bold border border-emerald-500/20 shrink-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 font-medium">व्हाट्सएप चैट (WhatsApp)</p>
+                            <a href="https://wa.me/919336838043" target="_blank" rel="noopener noreferrer" class="text-lg font-black text-white hover:text-emerald-400">+91 93368 38043</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4 p-5 bg-slate-900 border border-slate-800 rounded-2xl shadow-lg">
+                        <div class="w-14 h-14 bg-orange-500/10 text-orange-400 rounded-2xl flex items-center justify-center text-2xl font-bold border border-orange-500/20 shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-400 font-medium">दुकान का पूरा पता (Address)</p>
+                            <p class="text-sm font-bold text-white">अल्लाबलपुर, बेवर रोड, मोहम्मदाबाद, फर्रुखाबाद (हिंदुस्तान पेट्रोल पंप, तकीपुर के पास)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 p-8 sm:p-10 rounded-3xl shadow-2xl flex flex-col justify-between">
+                <div>
+                    <h3 class="text-2xl font-black mb-6 text-white flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-orange-400"></i> खुलने का समय (Opening Hours)
+                    </h3>
+                    <div class="space-y-4 text-sm divide-y divide-slate-800">
+                        <div class="flex justify-between pt-3"><span class="text-slate-400 font-medium">सोमवार</span> <span class="font-bold text-orange-400">09:00 AM – 08:00 PM</span></div>
+                        <div class="flex justify-between pt-3"><span class="text-slate-400 font-medium">मंगलवार</span> <span class="font-bold text-orange-400">09:00 AM – 08:00 PM</span></div>
+                        <div class="flex justify-between pt-3"><span class="text-slate-400 font-medium">बुधवार</span> <span class="font-bold text-orange-400">09:00 AM – 08:00 PM</span></div>
+                        <div class="flex justify-between pt-3"><span class="text-slate-400 font-medium">वीरवार (Thursday)</span> <span class="font-bold text-orange-400">09:00 AM – 08:00 PM</span></div>
+                        <div class="flex justify-between pt-3"><span class="text-slate-400 font-medium">शुक्रवार</span> <span class="font-bold text-orange-400">09:00 AM – 08:00 PM</span></div>
+                        <div class="flex justify-between pt-3"><span class="text-slate-400 font-medium">शनिवार</span> <span class="font-bold text-orange-400">09:00 AM – 08:00 PM</span></div>
+                        <div class="flex justify-between pt-3"><span class="text-slate-400 font-medium">रविवार</span> <span class="font-bold text-orange-400">09:00 AM – 08:00 PM</span></div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-6 border-t border-slate-800">
+                    <a href="tel:9336838043" class="w-full py-4 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold rounded-2xl shadow-xl shadow-orange-500/25 transition-all block text-center text-base">
+                        <i class="fa-solid fa-phone mr-2"></i> अभी कॉल करके बात करें
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-900 text-center">
+        <div class="max-w-7xl mx-auto space-y-4">
+            <div class="flex items-center justify-center space-x-2 text-white font-black text-lg">
+                <i class="fa-solid fa-motorcycle text-orange-500"></i>
+                <span>मां वैष्णो ऑटो पार्ट एंड रिपेयर सेंटर</span>
+            </div>
+            <p class="text-xs text-slate-400 max-w-md mx-auto">अल्लाबलपुर, बेवर रोड, मोहम्मदाबाद, फर्रुखाबाद (हिंदुस्तान पेट्रोल पंप के पास)</p>
+            <p class="text-xs text-slate-600 pt-4">&copy; 2019 - 2026 Maa Vaishno Auto Parts & Repair Center. All rights reserved. Developed with ❤️ for Vivek Ji.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4 transition-opacity" role="dialog" aria-modal="true">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl relative space-y-6 transform transition-transform">
+            <button onclick="closeBookingModal()" aria-label="Close modal" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl p-2 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition focus:outline-none focus:ring-2 focus:ring-orange-500">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <div class="space-y-2">
+                <h3 class="text-2xl font-black text-white">सर्विस या पूछताछ के लिए संपर्क</h3>
+                <p class="text-xs text-slate-400">विवेक जी से सीधा संपर्क करने के लिए नीचे दिए गए विकल्प चुनें:</p>
+            </div>
+            <div class="space-y-4">
+                <div>
+                    <label for="client-name" class="block text-xs font-semibold text-slate-300 mb-1">आपका नाम (Your Name)</label>
+                    <input type="text" id="client-name" placeholder="अपना नाम लिखें" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition">
+                    <p id="name-error" class="text-[10px] text-red-400 mt-1 hidden">कृपया अपना नाम दर्ज करें।</p>
+                </div>
+                <div>
+                    <label for="client-msg" class="block text-xs font-semibold text-slate-300 mb-1">गाड़ी की समस्या या सर्विस का प्रकार</label>
+                    <textarea id="client-msg" rows="3" placeholder="जैसे: फुल सर्विसिंग, इंजन में आवाज, ब्रेक रिपेयर आदि..." class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition"></textarea>
+                </div>
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <a href="tel:9336838043" onclick="closeBookingModal()" class="py-3.5 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold rounded-xl text-center text-sm shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2 hover:opacity-95 transition focus:outline-none focus:ring-2 focus:ring-orange-400">
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i> कॉल करें
+                    </a>
+                    <button type="button" onclick="sendWhatsAppMessage()" class="py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-center text-sm shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2 transition focus:outline-none focus:ring-2 focus:ring-emerald-400 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-lg" aria-hidden="true"></i> WhatsApp भेजें
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="f-logo">🔧 मां वैष्णो ऑटो पार्ट्स एंड रिपेयर सेंटर</div>
-  <p>अलावलपुर, उ.प्र. &nbsp;·&nbsp; <a href="tel:9336838043">93368 38043</a> &nbsp;·&nbsp; सुबह 9 — रात 8</p>
-</footer>
+    <!-- JavaScript -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')) {
+                icon.className = "fa-solid fa-bars";
+                document.body.style.overflow = '';
+            } else {
+                icon.className = "fa-solid fa-xmark";
+                document.body.style.overflow = 'hidden';
+            }
+        }
 
-<script>
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:0.12});
-document.querySelectorAll('.fade').forEach((el,i)=>{el.style.transitionDelay=(i%4)*0.08+'s';obs.observe(el)});
-</script>
+        function openBookingModal() {
+            const modal = document.getElementById('booking-modal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                const nameInput = document.getElementById('client-name');
+                if(nameInput) nameInput.focus();
+            }, 100);
+        }
+
+        function closeBookingModal() {
+            const modal = document.getElementById('booking-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+            const err = document.getElementById('name-error');
+            if(err) err.classList.add('hidden');
+        }
+
+        function sendWhatsAppMessage() {
+            const nameField = document.getElementById('client-name');
+            const msgField = document.getElementById('client-msg');
+            const nameError = document.getElementById('name-error');
+            
+            const name = nameField && nameField.value.trim() ? nameField.value.trim() : '';
+            
+            if (!name) {
+                if(nameError) nameError.classList.remove('hidden');
+                if(nameField) nameField.focus();
+                return;
+            } else {
+                if(nameError) nameError.classList.add('hidden');
+            }
+
+            const msg = msgField && msgField.value.trim() ? msgField.value.trim() : 'सर्विस करवानी है';
+            const text = `नमस्ते विवेक जी! मेरा नाम ${name} है। ${msg}`;
+            const url = `https://wa.me/919336838043?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
+            closeBookingModal();
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('booking-modal');
+            if (event.target === modal) {
+                closeBookingModal();
+            }
+        }
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('mobile-menu');
+                const icon = document.getElementById('menu-icon');
+                menu.classList.add('hidden');
+                icon.className = "fa-solid fa-bars";
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
 </body>
 </html>
+
